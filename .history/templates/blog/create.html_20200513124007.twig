@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h2>Create articles</h2>
+
+{{ form_start(formArticle) }}
+
+<div class="form-group">
+    <label for="">Title</label>
+    {{ form_widget(formArticle.title) }}
+</div>
+
+<div class="form-group">
+    <label for="">Contenu</label>
+    {{ form_widget(formArticle.content) }}
+</div>
+
+<div class="form-group">
+    <label for="">IMAGE</label>
+    {{ form_widget(formArticle.image) }}
+</div>
+
+{{ form_end(formArticle) }}
+{% endblock %}

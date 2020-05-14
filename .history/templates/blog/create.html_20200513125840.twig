@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formArticle 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+<h2>Create articles</h2>
+
+{{ form_start(formArticle) }}
+
+{{ form_widget(formArticle) }}
+
+{{ form_end(formArticle) }}
+{% endblock %}

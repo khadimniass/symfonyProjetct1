@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <article>
+        <h2>{{article.title }}</h2>
+        <div class="metada">ecrit le {{ article.createdAt | date('d/m/Y') }} à 
+        {{ article.createdAt | date('H:i') }} dans la catégorie politique</div>
+        <div class="content">
+            <img src="{{article.image}}" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad accusantium voluptate vitae fuga aliquid?</p>
+            <p>Voluptate non commodi libero a ducimus. Consequatur sequi illum modi deleniti sunt dolores, natus eos?</p>
+            <hr>
+                {{article.content |raw}}
+        </div>
+    </article>
+
+
+{% endblock %}

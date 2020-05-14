@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+{% for article in articles %}
+    <article>
+        <h2>titre de l'article</h2>
+        <div class="metada">ecrit le 12/05/2020 à 12:45 dans la catégorie politique</div>
+        <div class="contaent">
+            <img src="//via.placeholder.com/350x150" alt="">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam ad accusantium voluptate vitae fuga aliquid?</p>
+            <p>Voluptate non commodi libero a ducimus. Consequatur sequi illum modi deleniti sunt dolores, natus eos?</p>
+            <a href="{{ path('blog_show') }}" class="btn btn-primary">Lire la suite</a>
+        </div>
+    </article>
+{% endfor %}
+{% endblock %}
